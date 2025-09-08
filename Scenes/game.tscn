@@ -3,17 +3,14 @@
 [ext_resource type="PackedScene" uid="uid://co8s5m26qevvm" path="res://Scenes/player.tscn" id="1_ebmjs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ebmjs"]
-distance = 4.0
 
 [node name="game" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_ebmjs")]
-platform_wall_layers = 255
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2, 6)
 shape = SubResource("WorldBoundaryShape2D_ebmjs")
